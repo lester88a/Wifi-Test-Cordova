@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+        <title>DownloadTest</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="app center-block"></div>
+            <h3 class="text-center well">Download&Upload Test</h3>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received text-center">Device is Ready</p>
+            </div>
+            <hr />
+            <div class="row">
+                
+                <div class="col-xs-12">
+                    <div class="text-center">
+                        <span class="center-block">Select a testing file to download:</span>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="text-center">
+                        <input id="50MB" type="radio" value="10" name="testTime" checked="checked" /><span>50MB</span>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="text-center">
+                        <input id="100MB" type="radio" value="30" name="testTime" /><span>100MB</span>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="text-center">
+                        <input id="500MB" type="radio" value="60" name="testTime" /><span>500MB</span>
+                    </div>
+                </div>
+                
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="text-center">
+                        <button class="btn btn-default" id="downloadFile">Download</button>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="text-center">
+                        <button class="btn btn-default" id="uploadFile">Upload</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <hr class="invisible" />
+            <hr class="invisible" />
+            <hr class="invisible" />
+        </div>
+
+        <div>
+            <nav class="navbar navbar-default navbar-fixed-bottom">
+                <div class="col-xs-3">
+                    <div class="text-center">
+                        <i class="nav btn fa fa-download fa-3x myCoActivted" id="downloadBtn"></i>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="text-center">
+                        <i class="nav btn fa fa-upload fa-3x myCo" id="uploadBtn"></i>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="text-center">
+                        <i class="nav btn fa fa-wifi fa-3x myCo" id="wifiBtn"></i>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="text-center">
+                        <i class="nav btn fa fa-info-circle fa-3x myCo" id=""></i>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+        <script type="text/javascript" src="scripts/index.js"></script>
+    </body>
+</html>
