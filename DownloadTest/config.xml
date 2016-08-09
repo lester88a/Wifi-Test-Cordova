@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" id="io.cordova.myapp89e271" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US">
-  <name>Download Test</name>
+<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" id="io.cordova.wifiTest" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US" windows-packageVersion="1.0.0.0">
+  <name>WiFi Test</name>
   <description>A blank project that uses Apache Cordova to help you build an app that targets multiple mobile platforms: Android, iOS, Windows, and Windows Phone.</description>
   <author href="http://cordova.io" email="dev@cordova.apache.org">Apache Cordova Team </author>
   <content src="index.html" />
   <access origin="*" />
   <vs:features />
   <preference name="SplashScreen" value="screen" />
-  <preference name="windows-target-version" value="8.1" />
+  <preference name="windows-target-version" value="10.0" />
+  <preference name="windows-phone-target-version" value="10.0" />
   <!-- Support for Cordova 5.0.0 plugin system -->
   <plugin name="cordova-plugin-whitelist" version="1" />
   <allow-intent href="http://*/*" />
@@ -111,4 +112,10 @@
   <plugin name="cordova-plugin-network-information" version="1.2.1" />
   <plugin name="cordova-plugin-splashscreen" version="3.2.2" />
   <plugin name="cordova-plugin-compat" version="1.0.0" />
+  <preference name="WindowsStoreDisplayName" value="WiFi Test" />
+  <vs:platformSpecificValues>
+    <vs:platformSpecificWidget platformName="windows" id="WiFiTest" version="1.0.0.0" />
+  </vs:platformSpecificValues>
+  <plugin name="cordova-plugin-inappbrowser" version="1.4.0" />
+  <plugin name="cordova-plugin-statusbar" version="2.1.3" />
 </widget>

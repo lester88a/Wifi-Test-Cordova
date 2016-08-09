@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+        <title>DownloadTest</title>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="app appUpload center-block"></div>
+            <h3 class="text-center">Upload Test</h3>
+            
+            
+            <div id="resultUploadArea" class="hidden">
+                <hr />
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Test Result:</h3>
+                    </div>
+                    <div id="resultUpload" class="panel-body"></div>
+                </div>
+            </div>
+
+            <hr />
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <div  id="loadingUpload" class="hidden">
+                        <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                    </div>
+                    <div class="row">
+                        <label class="btn btn-default btn-file">
+                            <i id="uploadFileBtn" class="fa fa-folder-open-o" aria-hidden="true"></i> 
+                            <input type="file" id="fileUpload" style="display:inline-block;">
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <hr />
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="text-center">
+                        <button id="uploadReset" type="reset" class="button2 buttonGrey">Reset</button>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="text-center">
+                        <button id="uploadSubmit" type="submit" class="button2 buttonRed">Start</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <hr class="invisible" />
+            <hr class="invisible" />
+            <hr class="invisible" />
+        </div>
+
+        
+        <div>
+            <nav class="navbar navbar-default navbar-fixed-bottom">
+                <div class="col-xs-3">
+                    <div class="text-center btnColored">
+                        <i class="fa fa-download fa-lg" id="goDownload"></i><br /><small>Download</small>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="text-center btnColorActivted">
+                        <i class="fa fa-upload fa-lg" id="goUpload"></i><br /><small>Upload</small>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="text-center btnColored">
+                        <i class="fa fa-wifi fa-lg" id="goWifi"></i><br /><small>WiFi</small>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="text-center btnColored">
+                        <i class="fa fa-info-circle fa-lg" id="goInfo"></i><br /><small>Info</small>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+        <script type="text/javascript" src="scripts/upload.js"></script>
+    </body>
+
+</html>

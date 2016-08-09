@@ -17,53 +17,69 @@
     </head>
     <body>
         <div class="container">
-            <div class="app center-block"></div>
-            <h3 class="text-center well">Download&Upload Test</h3>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received text-center">Device is Ready</p>
+            <div class="app appDownload center-block"></div>
+            <h3 class="text-center">Download Test</h3>
+            
+            <div id="loadingDownload" class="hidden">
+                <div class="col-xs-12 text-center">
+                    <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
+                </div>
             </div>
+
+            
+            <div id="testResultArea" class="hidden">
+                <hr />
+                <div class="panel panel-info">
+                    <div class="panel-heading"> 
+                        <h3 class="panel-title">Test Result:</h3> 
+                    </div> 
+                    <div id="resultDownload" class="panel-body"></div> 
+                </div>
+            </div>
+
             <hr />
             <div class="row">
-                
                 <div class="col-xs-12">
-                    <div class="text-center">
-                        <span class="center-block">Select a testing file to download:</span>
+                    <div>
+                        <p><i class="fa fa-file-text-o" aria-hidden="true"></i> File Size:</p>
                     </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-xs-3">
                     <div class="text-center">
-                        <input id="50MB" type="radio" value="10" name="testTime" checked="checked" /><span>50MB</span>
+                        <input id="50mb" type="radio" value="50" name="testSize" checked="checked" class="btn" /><br /><span class="text-info"> 50 MB</span>
                     </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-xs-3">
                     <div class="text-center">
-                        <input id="100MB" type="radio" value="30" name="testTime" /><span>100MB</span>
+                        <input id="100mb" type="radio" value="100" name="testSize" class="btn" /><br /><span class="text-success"> 100 MB</span>
                     </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-xs-3">
                     <div class="text-center">
-                        <input id="500MB" type="radio" value="60" name="testTime" /><span>500MB</span>
+                        <input id="500mb" type="radio" value="500" name="testSize" class="btn" /><br /><span class="text-warning"> 500 MB</span>
                     </div>
                 </div>
-                
+                <div class="col-xs-3">
+                    <div class="text-center">
+                        <input id="1000mb" type="radio" value="1000" name="testSize" class="btn" /><br /><span class="text-danger">1000 MB</span>
+                    </div>
+                </div>
             </div>
             <hr />
             <div class="row">
                 <div class="col-xs-6">
                     <div class="text-center">
-                        <button class="btn btn-default" id="downloadFile">Download</button>
+                        <button class="button2 buttonGrey" id="downloadResetBtn">Reset</button>
                     </div>
                 </div>
                 <div class="col-xs-6">
                     <div class="text-center">
-                        <button class="btn btn-default" id="uploadFile">Upload</button>
+                        <button class="button2 buttonBlue" id="downloadFileBtn">Submit</button>
                     </div>
                 </div>
             </div>
 
-
-
+            
             <hr class="invisible" />
             <hr class="invisible" />
             <hr class="invisible" />
@@ -72,23 +88,23 @@
         <div>
             <nav class="navbar navbar-default navbar-fixed-bottom">
                 <div class="col-xs-3">
-                    <div class="text-center">
-                        <i class="nav btn fa fa-download fa-3x myCoActivted" id="downloadBtn"></i>
+                    <div class="text-center btnColorActivted">
+                        <i class="fa fa-download fa-lg" id="goDownload"></i><br /><small>Download</small>
                     </div>
                 </div>
                 <div class="col-xs-3">
-                    <div class="text-center">
-                        <i class="nav btn fa fa-upload fa-3x myCo" id="uploadBtn"></i>
+                    <div class="text-center btnColored">
+                        <i class="fa fa-upload fa-lg" id="goUpload"></i><br /><small>Upload</small>
                     </div>
                 </div>
                 <div class="col-xs-3">
-                    <div class="text-center">
-                        <i class="nav btn fa fa-wifi fa-3x myCo" id="wifiBtn"></i>
+                    <div class="text-center btnColored">
+                        <i class="fa fa-wifi fa-lg" id="goWifi"></i><br /><small>WiFi</small>
                     </div>
                 </div>
                 <div class="col-xs-3">
-                    <div class="text-center">
-                        <i class="nav btn fa fa-info-circle fa-3x myCo" id=""></i>
+                    <div class="text-center btnColored">
+                        <i class="fa fa-info-circle fa-lg" id="goInfo"></i><br /><small>Info</small>
                     </div>
                 </div>
             </nav>

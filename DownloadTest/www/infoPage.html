@@ -13,54 +13,57 @@
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
         <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
         <title>DownloadTest</title>
 
     </head>
     <body>
         <div class="container">
-            <div class="appWifi center-block"></div>
-            <h3 class="text-center well">Wifi Connection Test</h3>
-            <div id="deviceready" class="blink">
-                <p class="text-center">Device is Ready</p>
-            </div>
+            <div class="app appInfo center-block"></div>
+            <h3 class="text-center">Information</h3>
+            
             <hr />
             
-            
-
+            <div class="col-xs-12">
+                <div class="text-center">
+                    <button class="btn btn-default" id="inAppBrowserBtn"><i class="fa fa-rss fa-2x" aria-hidden="true"></i></button>
+                </div>
+            </div>
 
 
 
             <hr class="invisible" />
+            <hr class="invisible" />
+            <hr class="invisible" />
         </div>
 
-        
         <div>
             <nav class="navbar navbar-default navbar-fixed-bottom">
                 <div class="col-xs-3">
-                    <div class="text-center">
-                        <i class="nav btn fa fa-download fa-3x myCo" id="downloadBtn"></i>
+                    <div class="text-center btnColored">
+                        <i class="fa fa-download fa-lg" id="goDownload"></i><br /><small>Download</small>
                     </div>
                 </div>
                 <div class="col-xs-3">
-                    <div class="text-center">
-                        <i class="nav btn fa fa-upload fa-3x myCo" id="uploadBtn"></i>
+                    <div class="text-center btnColored">
+                        <i class="fa fa-upload fa-lg" id="goUpload"></i><br /><small>Upload</small>
                     </div>
                 </div>
                 <div class="col-xs-3">
-                    <div class="text-center">
-                        <i class="nav btn fa fa-wifi fa-3x myCoActivted" id="wifiBtn"></i>
+                    <div class="text-center btnColored">
+                        <i class="fa fa-wifi fa-lg" id="goWifi"></i><br /><small>WiFi</small>
                     </div>
                 </div>
                 <div class="col-xs-3">
-                    <div class="text-center">
-                        <i class="nav btn fa fa-info-circle fa-3x myCo" id=""></i>
+                    <div class="text-center btnColorActivted">
+                        <i class="fa fa-info-circle fa-lg" id="infoBtn"></i><br /><small>Info</small>
                     </div>
                 </div>
             </nav>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="scripts/platformOverrides.js"></script>
-        <script type="text/javascript" src="scripts/index.js"></script>
+        <script type="text/javascript" src="scripts/info.js"></script>
     </body>
 
 </html>
